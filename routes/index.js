@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const {fetchData} = require('../scraper');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function(req, res, next) {
+  const $ = await fetchData();
+  res.render('index', {title: 'Express'});
 });
 
 module.exports = router;
