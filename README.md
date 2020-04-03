@@ -1,2 +1,3 @@
-# web-scrapper
-A simple web scrapper
+# Web Scraper
+
+A simple web scraper
